@@ -1,14 +1,17 @@
 ﻿namespace Kohde.Assessment
 {
-    public class Dog
+    public class Dog : Mammal, System.IDisposable
     {
-        public string Name { get; set; }
-        public int Age { get; set; }
         public string Food { get; set; }
 
-        public string GetDetails()
+        public void Dispose()
         {
-            return "Name: " + Name + "Age: " + Age;
+            throw new System.NotImplementedException();
+        }
+
+        public override string ToString()
+        {
+            throw new System.NotImplementedException();
         }
     }
 }
